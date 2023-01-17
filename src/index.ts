@@ -10,7 +10,7 @@ app.use('/cars', carRoutes);
 
 const PORT = process.env.PORT || 3000;
 
-connectToDb('mongodb://localhost:27017/chris_hunor_mongodb');
+connectToDb('mongodb://root:rootpassword@localhost:27017/chris_hunor_mongodb?authSource=admin');
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
